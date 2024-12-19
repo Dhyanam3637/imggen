@@ -30,17 +30,3 @@
 
 
 
-<html>
-<body>
-    <label for="fname">First name:</label>
-<input type="text" id="fname" name="fname">
-    <script src="https://js.puter.com/v2/"></script>
-    <script>
-        des = Document.getElementById(fname);
-        puter.ai.txt2img(des)
-            .then(imageElement => {
-                document.body.appendChild(imageElement);
-            });
-    </script>
-</body>
-</html>
