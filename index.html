@@ -1,3 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Input App</title>
+     <script src="https://js.puter.com/v2/"></script>
+</head>
+<body>
+  <h1>Image Prompt:</h1>
+  <input type="text" id="textInput">
+  <button onclick="storeText()">Create Image</button>
+
+  <script>
+    function storeText() {
+      // Get the text from the input field
+      let userInput = document.getElementById("textInput").value;
+
+      // Store the text in a JavaScript variable
+      let storedText = userInput;
+
+      puter.ai.txt2img(storedText)
+            .then(imageElement => {
+                document.body.appendChild(imageElement);
+            });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
 <html>
 <body>
     <label for="fname">First name:</label>
